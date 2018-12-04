@@ -1,0 +1,5 @@
+PROC := $(shell uname -p)
+OUTDIR=$(PRIVDIR)/linux/$(PROC)
+NIF=$(OUTDIR)/ex11-kb-$(PROC).so
+
+LDFLAGS += -lX11 -lXtst

@@ -1,0 +1,6 @@
+OUTDIR=$(PRIVDIR)/macos
+NIF=$(OUTDIR)/ex11-kb.so
+
+# Presumably installed XQuartz for X11 support in MacOS
+CFLAGS += -I/usr/X11/include
+LDFLAGS += -arch x86_64 -flat_namespace -undefined suppress -L/usr/X11/lib -lX11 -lXtst
